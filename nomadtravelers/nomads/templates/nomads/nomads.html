@@ -6,7 +6,7 @@
 
 <ul>
     {% for place in places %}
-        <li>place:{{place.place_name}} ----{{place.Description}}</li>
+        <li>place:<a href="{% url 'nomad' place.id %}">{{place.place_name}}</a> ----{{place.Description}}</li>
     {% endfor %}
 </ul>
 

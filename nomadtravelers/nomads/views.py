@@ -60,4 +60,8 @@ def nomads(request):
 
 
 def nomad(request, pk):
-    return render(request, 'nomads/nomad.html')
+    placeobj = None
+    for i in places_list:
+        if i['id']==pk:
+            placeobj=i
+    return render(request, 'nomads/nomad.html',{'place':placeobj})
