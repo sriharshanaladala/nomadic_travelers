@@ -2,13 +2,12 @@
 {% block content %}
 {{msg}}
 <h1>nomads templates</h1>
+{{message}}
 
-<p>The standard Lorem Ipsum passage, used since the 1500s
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolo
-    re magna aliqua. Ut enim ad minim veniam, quis nostrud e
-    xercitation ullamco laboris nisi ut aliquip ex ea commod
-    o consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dol
-    ore eu fugiat nulla pariatur. Excepte
-    ur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+<ul>
+    {% for place in places %}
+        <li>place:{{place.place_name}} ----{{place.Description}}</li>
+    {% endfor %}
+</ul>
 
 {% endblock content %}
